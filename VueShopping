@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			 <table>
+			                <thead>
+			                    <tr>
+			                        <th>序号</th>
+			                        <th>书籍名</th>
+			                        <th>出版日期</th>
+			                        <th>价格</th>
+			                        <th>数量</th>
+									<th>操作</th>
+			                    </tr>
+			                </thead>
+							<tbody>
+								<tr v-for ="(a,i) in book">
+				
+										<td>{{i+1}}</td>
+										<td>{{a.name}}</td>
+										<td>{{a.date}}</td>
+										<td>{{a.price}}</td>
+										<td>{{a.sum}}</td>
+									
+								
+									<td><button v-on:click="remove(index)">remove</button></td>
+								</tr>
+							
+							</tbody>
+			</div>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			let app = new Vue({
+				el: '#app',
+				data:{
+				
+					book:[
+						{
+							name:'Java入门到放弃',
+							date:'2010-10',
+							price:60.00,
+							sum:1
+						},
+						{
+							name:'PHP入门到放弃',
+							date:'2012-10',
+							price:'90',
+							sum:1
+						},
+						{
+							name:'python入门到放弃',
+							date:'2013-10',
+							price:'80',
+							sum:1
+						},
+						{
+							name:'什么都入门到放弃',
+							date:'2011-10',
+							price:'70',
+							sum:1
+						}
+					]
+						
+					
+					
+				},
+				
+			})
+	</body>
+</html>
